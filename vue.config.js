@@ -52,7 +52,7 @@ module.exports = defineConfig({
           ctjs,
           {
             from: path.resolve("public/icons/"),
-            to: `${path.resolve("dist")}/`,
+            to: `${path.resolve("dist")}/icons/`,
           },
         ],
       },
