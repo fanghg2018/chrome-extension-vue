@@ -44,9 +44,19 @@ module.exports = defineConfig({
     },
   },
   chainWebpack: (config) => {
-    config
-      .plugin("copy")
-      .use(CopyWebpackPlugin, [{ patterns: [manifest, bgjs, ctjs] }]);
+    config.plugin("copy").use(CopyWebpackPlugin, [
+      {
+        patterns: [
+          manifest,
+          bgjs,
+          ctjs,
+          {
+            from: path.resolve("public/"),
+            to: `${path.resolve("dist")}/`,
+          },
+        ],
+      },
+    ]);
   },
   css: {
     //输出css
