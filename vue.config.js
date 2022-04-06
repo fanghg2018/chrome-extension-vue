@@ -51,7 +51,7 @@ module.exports = defineConfig({
           bgjs,
           ctjs,
           {
-            from: path.resolve("public/"),
+            from: path.resolve("public/icons/"),
             to: `${path.resolve("dist")}/`,
           },
         ],
