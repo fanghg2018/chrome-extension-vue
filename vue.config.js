@@ -54,6 +54,10 @@ module.exports = defineConfig({
             from: path.resolve("public/icons/"),
             to: `${path.resolve("dist")}/icons/`,
           },
+          {
+            from: path.resolve("public/favicon.ico"),
+            to: `${path.resolve("dist")}/favicon.ico`,
+          },
         ],
       },
     ]);

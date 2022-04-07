@@ -1,40 +1,49 @@
 <template>
-  <el-row>
-    <el-col :span="24"
-      ><div class="grid-content bg-purple-dark">
-        <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-          <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-          <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-          <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-          <el-tab-pane label="定时任务补偿" name="fourth"
-            >定时任务补偿</el-tab-pane
-          >
-        </el-tabs>
-      </div></el-col
-    >
-  </el-row>
+  <el-card class="box-card">
+    <div class="clearfix">
+      <span>Chrome扩展程序选项</span>
+    </div>
+    <div v-for="o in 4" :key="o" class="text item">
+      {{ "列表内容 " + o }}
+    </div>
+    <div class="btn">
+      <el-button size="medium" type="primary">保存</el-button
+      ><el-button size="medium" class="reset">重置</el-button>
+    </div>
+  </el-card>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      activeName: "first",
-    };
-  },
-  methods: {
-    handleClick(tab, event) {
-      console.log(tab, event);
-    },
-  },
-};
-</script>
+
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 body {
-  margin: 20px 200px;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+}
+.text {
+  margin: 20px 20px;
+  font-size: 14px;
+}
+
+.item {
+  margin-bottom: 18px;
+}
+
+.clearfix {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.reset {
+  margin-left: 20px !important;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.box-card {
+  margin-top: 40px;
+  width: 650px;
 }
 </style>
