@@ -70,3 +70,4 @@ module.exports = defineConfig({
 //屏蔽生成-legacy文件,找到.browserslistrc。后面添加一句话即可 not ie <= 11
 //package.json更改为 "serve": "vue-cli-service build --mode development --watch",
 //.eslintrc.json 需要添加："env": {"webextensions": true}
+//在manifest中backgroud   "persistent": true
