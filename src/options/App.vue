@@ -1,7 +1,10 @@
 <template>
   <el-card class="box-card">
     <div class="clearfix">
-      <span>Chrome扩展程序选项</span>
+      <span>
+        <el-image style="width: 16px; height: 16px" :src="url"></el-image
+      ></span>
+      <span>Chrome扩展程序选项 </span>
     </div>
     <div v-for="o in 4" :key="o" class="text item">
       {{ "列表内容 " + o }}
@@ -12,12 +15,24 @@
     </div>
   </el-card>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      url: require("../assets/logo.png"),
+    };
+  },
+};
+</script>
 
 <style>
 body {
   background-color: #eeeeee;
   display: flex;
   justify-content: center;
+}
+span {
+  margin-left: 10px;
 }
 .text {
   margin: 20px 20px;
